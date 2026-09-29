@@ -63,9 +63,9 @@ function fit(c) {
 }
 const scenes = {
   net(x, w, h, t, s) {
-    s.n = s.n || Array.from({ length: 26 }, () => ({ x: Math.random() * w, y: Math.random() * h, a: Math.random() * 6.28 }));
+    s.n = s.n || Array.from({ length: Math.min(110, Math.max(26, (w * h / 14000) | 0)) }, () => ({ x: Math.random() * w, y: Math.random() * h, a: Math.random() * 6.28 }));
     s.n.forEach(p => { p.x += Math.cos(p.a) * 0.3; p.y += Math.sin(p.a) * 0.3; if (p.x < 0 || p.x > w) p.a = Math.PI - p.a; if (p.y < 0 || p.y > h) p.a = -p.a; });
-    s.n.forEach((p, i) => { s.n.slice(i + 1).forEach(q => { const d = Math.hypot(p.x - q.x, p.y - q.y); if (d < 90) { x.strokeStyle = `rgba(255,35,71,${1 - d / 90})`; x.beginPath(); x.moveTo(p.x, p.y); x.lineTo(q.x, q.y); x.stroke(); } }); x.fillStyle = RED[2]; x.beginPath(); x.arc(p.x, p.y, 2.5, 0, 6.28); x.fill(); });
+    s.n.forEach((p, i) => { s.n.slice(i + 1).forEach(q => { const d = Math.hypot(p.x - q.x, p.y - q.y); if (d < 110) { x.strokeStyle = `rgba(255,35,71,${1 - d / 110})`; x.beginPath(); x.moveTo(p.x, p.y); x.lineTo(q.x, q.y); x.stroke(); } }); x.fillStyle = RED[2]; x.beginPath(); x.arc(p.x, p.y, 2.5, 0, 6.28); x.fill(); });
   },
   radar(x, w, h, t) {
     const cx = w / 2, cy = h / 2, R = Math.min(w, h) * 0.42; x.strokeStyle = "rgba(255,35,71,.35)";
@@ -94,7 +94,8 @@ const scenes = {
     RED.slice(0, 4).forEach((c, k) => { x.strokeStyle = c; x.lineWidth = 2; x.beginPath(); for (let i = 0; i <= w; i += 4) { const y = h / 2 + Math.sin(i / 34 + t / (500 + k * 120) + k) * (18 + k * 9); i ? x.lineTo(i, y) : x.moveTo(i, y); } x.stroke(); });
   },
   grid(x, w, h, t) {
-    const n = 8, cw = w / n, ch = h / 5; for (let i = 0; i < n; i++) for (let j = 0; j < 5; j++) { const v = 0.5 + 0.5 * Math.sin(t / 500 + i * 0.7 + j * 1.1); x.fillStyle = `rgba(255,35,71,${0.08 + v * 0.6})`; x.fillRect(i * cw + 4, j * ch + 4, cw - 8, ch - 8); }
+    const cs = 72, n = Math.ceil(w / cs), m = Math.ceil(h / cs);
+    for (let i = 0; i < n; i++) for (let k = 0; k < m; k++) { const v = 0.5 + 0.5 * Math.sin(t / 600 + i * 0.7 + k * 1.1); x.fillStyle = `rgba(255,35,71,${0.03 + v * 0.3})`; x.fillRect(i * cs + 3, k * cs + 3, cs - 6, cs - 6); }
   }
 };
 const arts = $$("canvas[data-art]").map(c => ({ c, f: scenes[c.dataset.art], s: {}, v: false, ...fit(c) }));
