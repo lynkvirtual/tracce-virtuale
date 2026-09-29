@@ -1,112 +1,138 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TRACCE VIRTUALE | Estrategia, IA, automatización y sistemas digitales</title>
-<meta name="description" content="TRACCE VIRTUALE integra estrategia digital, inteligencia artificial, automatización, desarrollo web, marketing e inteligencia digital para construir sistemas que generan resultados.">
-<meta name="theme-color" content="#08090b">
-<link rel="canonical" href="https://tracce.virtuale.com/">
+<title>Tracce Virtuale | Presencia digital, visibilidad e inteligencia</title>
+<meta name="description" content="Tracce Virtuale: ecosistema de presencia digital, directorio LYNK, ciberseguridad LYNXUS y gestión de talento IMMAGE MANAGERS.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="site-header" id="inicio">
-  <div class="container nav">
-    <a class="brand" href="#inicio"><img src="assets/tracce-logo.png" alt="TRACCE VIRTUALE"></a>
-    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
-    <nav class="menu" aria-label="Navegación principal">
-      <a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#soluciones">Soluciones</a><a href="#ecosistema">Ecosistema</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a>
-    </nav>
-    <div class="quick"><a href="tel:+527551049666">755 104 9666</a><a href="https://tracce.virtuale.com/">tracce.virtuale.com</a><a class="btn btn-outline" href="#contacto">Hablemos</a></div>
-  </div>
+<div class="bar" id="bar"></div>
+<div class="cursor" id="cursor"></div>
+
+<header class="site-header">
+ <div class="container nav">
+  <a class="brand" href="#inicio"><img src="assets/tracce-logo.png" alt="Tracce Virtuale"></a>
+  <nav class="menu" id="menu">
+   <a href="#capacidades">Capacidades</a><a href="#ecosistema">Ecosistema</a><a href="#legado">Legado</a><a href="#lynk">LYNK</a><a href="#seguridad">Seguridad</a><a href="#metodo">Método</a><a href="#contacto">Contacto</a>
+  </nav>
+  <button class="sound" id="sound" aria-pressed="false" title="Activar sonido">SONIDO: NO</button>
+  <button class="menu-toggle" id="toggle" aria-label="Menú">☰</button>
+ </div>
 </header>
 
 <main>
-<section class="hero section">
-  <div class="container hero-grid">
-    <div class="hero-copy reveal">
-      <img class="hero-wordmark" src="assets/tracce-logo.png" alt="TRACCE VIRTUALE">
-      <div class="meta">ESTRATEGIA · TECNOLOGÍA · INTELIGENCIA</div>
-      <h1>Sistemas digitales con <span>estrategia, automatización</span> e inteligencia.</h1>
-      <p>Transformamos datos, procesos y tecnología en ventajas reales. Estrategia digital, IA, sistemas web y operaciones diseñadas para producir resultados.</p>
-      <div class="hero-actions"><a class="btn btn-red" href="#servicios">Nuestras soluciones</a><a class="btn btn-dark" href="#contacto">Agendar consulta</a></div>
-    </div>
-    <div class="hero-media reveal">
-      <div class="hero-glow"></div>
-      <img src="assets/hero-system.webp" alt="Sistema digital de TRACCE con redes, datos e inteligencia">
-      <div class="telemetry"><span>STRATEGY</span><span>AUTOMATION</span><span>INTELLIGENCE</span></div>
-    </div>
-  </div>
+<section class="hero" id="inicio">
+ <canvas id="hero-canvas" aria-hidden="true"></canvas>
+ <div class="container hero-inner">
+  <img class="hero-logo glitch" src="assets/tracce-logo.png" alt="Tracce Virtuale">
+  <p class="meta">Ecosistema digital · Guerrero, México</p>
+  <h1>Tu presencia, <span>en la red</span> y en la mente de tus clientes.</h1>
+  <p class="lead">Combinamos inteligencia artificial, dirección humana y más de quince años de historia en portales de destino para hacer visibles, seguros y memorables a negocios, marcas y personas.</p>
+  <div class="hero-actions"><a class="btn btn-red" href="#contacto">Iniciar proyecto</a><a class="btn btn-outline" href="#ecosistema">Conocer el ecosistema</a></div>
+ </div>
 </section>
 
-<section class="section services" id="servicios">
-  <div class="container">
-    <div class="section-head"><div><div class="meta">NUESTRAS CAPACIDADES</div><h2>Tecnología aplicada a problemas reales.</h2></div><p>No vendemos herramientas sueltas. Conectamos estrategia, datos, personas y tecnología alrededor de un objetivo.</p></div>
-    <div class="service-grid">
-      <article class="service-card reveal"><img src="assets/service-ai.webp" alt="Inteligencia artificial y automatización"><div class="card-copy"><span>01</span><h3>IA y automatización</h3><p>Sistemas inteligentes que automatizan tareas, conectan herramientas y reducen trabajo operativo.</p><a href="#contacto">Ver más →</a></div></article>
-      <article class="service-card reveal"><img src="assets/service-web.webp" alt="Desarrollo web"><div class="card-copy"><span>02</span><h3>Desarrollo web</h3><p>No entregamos páginas web. Construimos sistemas digitales rápidos, escalables y orientados a resultados.</p><a href="#contacto">Ver más →</a></div></article>
-      <article class="service-card reveal"><img src="assets/service-marketing.webp" alt="Marketing estratégico"><div class="card-copy"><span>03</span><h3>Marketing estratégico</h3><p>Investigación, posicionamiento, contenido y campañas construidas alrededor de objetivos comerciales.</p><a href="#contacto">Ver más →</a></div></article>
-      <article class="service-card reveal"><img src="assets/service-osint.webp" alt="OSINT e inteligencia digital"><div class="card-copy"><span>04</span><h3>OSINT / inteligencia digital</h3><p>Investigación de fuentes abiertas, análisis de entorno e información para tomar mejores decisiones.</p><a href="#contacto">Ver más →</a></div></article>
-      <article class="service-card reveal"><img src="assets/service-systems.webp" alt="Sistemas digitales"><div class="card-copy"><span>05</span><h3>Sistemas digitales</h3><p>Procesos, paneles, datos e integraciones dentro de un flujo operativo coherente y medible.</p><a href="#contacto">Ver más →</a></div></article>
-    </div>
+<div class="ticker"><div class="ticker-track"><span>PRESENCIA DIGITAL</span><span>DIRECTORIO LYNK</span><span>CIBERSEGURIDAD LYNXUS</span><span>IMMAGE MANAGERS</span><span>INTELIGENCIA ARTIFICIAL</span><span>OSINT</span><span>REPUTACIÓN ONLINE</span><span>PRESENCIA DIGITAL</span><span>DIRECTORIO LYNK</span><span>CIBERSEGURIDAD LYNXUS</span><span>IMMAGE MANAGERS</span><span>INTELIGENCIA ARTIFICIAL</span><span>OSINT</span><span>REPUTACIÓN ONLINE</span></div></div>
+
+<section class="section" id="capacidades">
+ <div class="container">
+  <div class="section-head"><h2>Lo que hacemos, <span>hecho visible</span></h2><p>Seis capacidades que trabajan juntas para que un negocio sea encontrado, protegido y recordado.</p></div>
+  <div class="grid3">
+   <article class="card tilt"><canvas data-art="net"></canvas><div class="card-copy"><h3>Presencia digital</h3><p>Sitios, perfiles y contenido con una identidad coherente en todos los canales donde te buscan.</p></div></article>
+   <article class="card tilt"><canvas data-art="radar"></canvas><div class="card-copy"><h3>Directorio y mapa LYNK</h3><p>Tu negocio ubicado, categorizado y descubrible desde una puerta de entrada accesible.</p></div></article>
+   <article class="card tilt"><canvas data-art="shield"></canvas><div class="card-copy"><h3>Ciberseguridad LYNXUS</h3><p>Protección técnica con enfoque en el factor humano, que es donde suelen empezar los incidentes.</p></div></article>
+   <article class="card tilt"><canvas data-art="eye"></canvas><div class="card-copy"><h3>Auditoría de exposición</h3><p>OSINT aplicado para mostrar qué información tuya es pública y cómo reducir el riesgo.</p></div></article>
+   <article class="card tilt"><canvas data-art="wave"></canvas><div class="card-copy"><h3>Reputación e imagen</h3><p>Monitoreo y construcción de una imagen sólida ante clientes, socios y buscadores.</p></div></article>
+   <article class="card tilt"><canvas data-art="grid"></canvas><div class="card-copy"><h3>IA con dirección humana</h3><p>Automatización que acelera el trabajo; las decisiones y la estrategia siguen siendo de personas.</p></div></article>
   </div>
+ </div>
 </section>
 
-<section class="section manifesto" id="soluciones">
-  <div class="container manifesto-grid">
-    <div class="reveal"><div class="meta">NUESTRA FILOSOFÍA</div><h2>No hacemos piezas aisladas. <span>Construimos sistemas digitales.</span></h2></div>
-    <div class="manifesto-copy reveal"><p>Una página web, una campaña o una automatización por sí mismas tienen un alcance limitado.</p><p>TRACCE conecta estrategia, contenido, tecnología, datos y operación dentro de un mismo ecosistema.</p><div class="signal-list"><div><b>01</b><span>Estrategia</span></div><div><b>02</b><span>Tecnología</span></div><div><b>03</b><span>Inteligencia</span></div><div><b>04</b><span>Automatización</span></div></div></div>
+<section class="section dark" id="ecosistema">
+ <div class="container">
+  <div class="section-head"><h2>Un ecosistema, <span>tres marcas</span></h2><p>LYNK abre la puerta, TRACCE VIRTUALE ofrece la alta gama e IMMAGE MANAGERS cuida a las personas detrás de la imagen.</p></div>
+  <div class="grid3">
+   <article class="eco tilt"><div class="logo-box"><img src="assets/tracce-logo-silver.png" alt="Tracce Virtuale"></div><h3>TRACCE VIRTUALE</h3><p>Servicios profesionales de alta gama: estrategia, presencia digital, reputación y seguridad a medida.</p></article>
+   <article class="eco tilt"><div class="logo-box"><img src="assets/lynk-logo.png" alt="LYNK"></div><h3>LYNK</h3><p>Directorio virtual y mapa de negocios. Es la entrada accesible al ecosistema para empresas de todos los tamaños.</p></article>
+   <article class="eco tilt"><div class="logo-box"><img src="assets/immage-logo.png" alt="Immage Managers"></div><h3>IMMAGE MANAGERS</h3><p>División de talento e imagen: representación, protección de identidad y presencia pública de personas.</p></article>
   </div>
+  <p class="note">Dentro del ecosistema, <b>LYNXUS</b> concentra la ciberseguridad y el trabajo con factores humanos.</p>
+ </div>
 </section>
 
-<section class="section ecosystem" id="ecosistema">
-  <div class="container">
-    <div class="section-head"><div><div class="meta">ECOSISTEMA TRACCE</div><h2>Un ecosistema. Múltiples especialistas.</h2></div><p>Cada unidad tiene una función clara y puede operar sola o integrarse en un sistema mayor.</p></div>
-    <div class="ecosystem-grid">
-      <article class="eco-card reveal"><div class="logo-box"><img src="assets/lynk-logo.png" alt="LYNK Digital Strategy"></div><h3>LYNK Digital Strategy</h3><p>Estrategia digital, marketing, posicionamiento, contenido, publicidad y crecimiento comercial.</p><a href="#contacto">Conocer LYNK →</a></article>
-      <article class="eco-card reveal"><div class="lynxus-lockup">LYN<span>X</span>US<small>SISTEMAS &amp; TECNOLOGÍA</small></div><h3>LYNXUS</h3><p>Seguridad digital, sistemas, investigación y soluciones tecnológicas para personas, familias y empresas.</p><a href="#contacto">Conocer LYNXUS →</a></article>
-      <article class="eco-card reveal"><div class="logo-box immage"><img src="assets/immage-logo.png" alt="IMMAGE MANAGER Agencia de Talento Digital"></div><h3>IMMAGE MANAGER</h3><p>Gestión, posicionamiento y desarrollo estratégico de talento e imagen digital.</p><a href="#contacto">Conocer IMMAGE →</a></article>
-    </div>
+<section class="section" id="legado">
+ <div class="container">
+  <div class="section-head"><h2>Un legado <span>que precede</span> a la tendencia</h2><p>Antes de que “lo digital” fuera obligatorio, ya publicábamos destinos en internet.</p></div>
+  <div class="timeline">
+   <div class="tl"><b>2005</b><h3>Nacen los portales</h3><p>Portal-LZC y los portales de Acapulco e Ixtapa ponen a la región en internet.</p></div>
+   <div class="tl"><b>2005–2010</b><h3>Una audiencia real</h3><p>Guías, directorios y turismo digital cuando pocos negocios tenían sitio web.</p></div>
+   <div class="tl"><b>Hoy</b><h3>Tracce Virtuale</h3><p>Esa experiencia se une con IA y seguridad para una nueva etapa.</p></div>
   </div>
+ </div>
 </section>
 
-<section class="section process" id="nosotros">
-  <div class="container">
-    <div class="section-head"><div><div class="meta">CÓMO TRABAJAMOS</div><h2>Del diagnóstico a la optimización.</h2></div><p>La tecnología entra después de entender qué debe suceder, quién lo supervisa y cómo se mide.</p></div>
-    <div class="steps">
-      <div class="step reveal"><b>01</b><h3>Investigamos</h3><p>Negocio, competencia, entorno, clientes y oportunidades.</p></div>
-      <div class="step reveal"><b>02</b><h3>Diseñamos</h3><p>Estrategia, estructura, herramientas y prioridades.</p></div>
-      <div class="step reveal"><b>03</b><h3>Construimos</h3><p>Sistemas, contenido, campañas y automatizaciones.</p></div>
-      <div class="step reveal"><b>04</b><h3>Medimos</h3><p>Resultados, operación y comportamiento.</p></div>
-      <div class="step reveal"><b>05</b><h3>Optimizamos</h3><p>El sistema aprende, mejora y evoluciona.</p></div>
-    </div>
-  </div>
+<section class="section dark" id="lynk">
+ <div class="container split">
+  <div><h2>LYNK: tu negocio <span>en el mapa</span></h2><p class="lead">Un directorio virtual con mapa donde los clientes encuentran negocios por categoría y ubicación. Es el primer paso natural: visibilidad inmediata, con la opción de crecer hacia los servicios de TRACCE VIRTUALE.</p><div class="hero-actions"><a class="btn btn-red" href="#contacto">Quiero aparecer en LYNK</a></div></div>
+  <div class="viz"><canvas data-art="radar" class="big"></canvas><img class="viz-logo" src="assets/lynk-logo.png" alt="LYNK"></div>
+ </div>
 </section>
 
-<section class="section human-ai">
-  <div class="container human-grid">
-    <div class="reveal"><div class="meta">IA + DIRECCIÓN HUMANA</div><h2>La inteligencia artificial amplifica capacidad. <span>La dirección sigue siendo humana.</span></h2><p>Usamos IA para investigar, analizar, producir y automatizar; definimos límites, permisos, objetivos y puntos de control antes de ejecutar.</p></div>
-    <div class="flow reveal"><div>HUMANO</div><i>↓</i><div>DIRECCIÓN</div><i>↓</i><div>IA</div><i>↓</i><div>EJECUCIÓN</div><i>↓</i><div>DATOS</div><i>↓</i><div>OPTIMIZACIÓN</div></div>
+<section class="section" id="seguridad">
+ <div class="container split rev">
+  <div class="viz"><canvas data-art="shield" class="big"></canvas></div>
+  <div><h2>Seguridad que <span>empieza por las personas</span></h2><p class="lead">La mayoría de los incidentes comienzan con un descuido, un engaño o información expuesta. LYNXUS combina defensa técnica con formación y auditorías de exposición para cerrar esa brecha.</p><ul class="ticks"><li>Auditoría de huella digital y exposición</li><li>Concientización y hábitos seguros</li><li>Reducción de superficie de ataque</li><li>Monitoreo de reputación</li></ul></div>
+ </div>
+</section>
+
+<section class="section dark" id="talento">
+ <div class="container split">
+  <div><img class="mini-logo" src="assets/immage-logo.png" alt="Immage Managers"><h2>Talento e imagen, <span>bien protegidos</span></h2><p class="lead">IMMAGE MANAGERS acompaña a personas con presencia pública: gestiona su imagen, cuida su identidad real y controla lo que se sabe de ellas en línea.</p></div>
+  <div class="viz"><canvas data-art="eye" class="big"></canvas></div>
+ </div>
+</section>
+
+<section class="section" id="metodo">
+ <div class="container">
+  <div class="section-head"><h2>Cómo <span>trabajamos</span></h2><p>Un proceso en cinco pasos, claro desde el primer día.</p></div>
+  <div class="steps">
+   <div class="step"><b>1</b><h3>Diagnóstico</h3><p>Entendemos tu negocio y tu situación digital actual.</p></div>
+   <div class="step"><b>2</b><h3>Estrategia</h3><p>Definimos objetivos, canales y prioridades.</p></div>
+   <div class="step"><b>3</b><h3>Construcción</h3><p>Diseñamos y publicamos tu presencia.</p></div>
+   <div class="step"><b>4</b><h3>Protección</h3><p>Aseguramos accesos, datos y reputación.</p></div>
+   <div class="step"><b>5</b><h3>Crecimiento</h3><p>Medimos, ajustamos y escalamos.</p></div>
   </div>
+ </div>
+</section>
+
+<section class="section dark">
+ <div class="container split">
+  <div><h2>IA que acelera, <span>personas que deciden</span></h2><p class="lead">Usamos inteligencia artificial para investigar, producir y automatizar. Cada resultado pasa por criterio humano antes de llegar a ti.</p></div>
+  <div class="flow"><div>DATOS</div><i>▼</i><div>INTELIGENCIA ARTIFICIAL</div><i>▼</i><div class="hot">DIRECCIÓN HUMANA</div><i>▼</i><div>RESULTADO CONFIABLE</div></div>
+ </div>
 </section>
 
 <section class="section contact" id="contacto">
-  <div class="container contact-grid">
-    <div class="contact-copy reveal"><div class="meta">HABLEMOS</div><h2>¿Tienes un <span>proyecto?</span></h2><p>Cuéntanos qué necesitas. Analizamos cómo convertirlo en un sistema funcional.</p><div class="contact-links"><a href="tel:+527551049666">755 104 9666</a><a href="https://wa.me/527551049666" target="_blank" rel="noopener">WhatsApp +52 755 104 9666</a><a href="https://tracce.virtuale.com/" target="_blank" rel="noopener">tracce.virtuale.com</a></div></div>
-    <form class="lead-form reveal" id="leadForm">
-      <label>Nombre<input id="nombre" required></label><label>Empresa<input id="empresa"></label><label>Teléfono<input id="telefono" type="tel" required></label><label>Email<input id="email" type="email"></label>
-      <label class="full">Tipo de proyecto<select id="tipo"><option>Estrategia digital</option><option>Desarrollo web</option><option>Automatización</option><option>Inteligencia artificial</option><option>Marketing</option><option>OSINT / investigación digital</option><option>Sistemas digitales</option><option>Otro</option></select></label>
-      <label class="full">Mensaje<textarea id="mensaje" required></textarea></label>
-      <button class="btn btn-red full" type="submit">Solicitar propuesta</button>
-    </form>
-  </div>
+ <div class="container split">
+  <div><h2>Hablemos de <span>tu proyecto</span></h2><p class="lead">Cuéntanos qué necesitas. Tu mensaje llega por WhatsApp y respondemos personalmente.</p></div>
+  <form class="lead-form" id="form">
+   <label>Nombre<input name="nombre" required></label>
+   <label>Empresa<input name="empresa"></label>
+   <label class="full">Me interesa<select name="interes"><option>Presencia digital</option><option>Directorio LYNK</option><option>Ciberseguridad LYNXUS</option><option>IMMAGE MANAGERS</option><option>Auditoría de exposición</option></select></label>
+   <label class="full">Mensaje<textarea name="mensaje" required></textarea></label>
+   <button class="btn btn-red full" type="submit">Enviar por WhatsApp</button>
+  </form>
+ </div>
 </section>
 </main>
 
-<footer><div class="container footer-grid"><img src="assets/tracce-logo-silver.png" alt="TRACCE VIRTUALE"><p>Estrategia · Tecnología · Inteligencia</p><div><a href="tel:+527551049666">755 104 9666</a><span>tracce.virtuale.com</span></div></div><div class="container copyright">© 2026 TRACCE VIRTUALE. Todos los derechos reservados.</div></footer>
-<a class="wa" href="https://wa.me/527551049666?text=Hola%20TRACCE%20VIRTUALE%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20soluciones%20digitales." target="_blank" rel="noopener" aria-label="WhatsApp">↗</a>
+<footer><div class="container footer-grid"><img src="assets/tracce-logo-silver.png" alt="Tracce Virtuale"><p>Presencia digital, seguridad y talento.</p><div><img src="assets/lynk-logo.png" alt="LYNK" class="f-logo"><img src="assets/immage-logo.png" alt="Immage Managers" class="f-logo"></div></div><div class="container copyright">© Tracce Virtuale. Todos los derechos reservados.</div></footer>
+<a class="wa" id="wa" href="#" aria-label="WhatsApp">✆</a>
 <script src="script.js"></script>
-</body></html>
+</body>
+</html>
