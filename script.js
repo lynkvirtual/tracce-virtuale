@@ -1,5 +1,5 @@
 /* ===== Configuración: cambia aquí tu número de WhatsApp (código de país + número, sin + ni espacios) ===== */
-const WA_NUMBER = "521XXXXXXXXXX";
+const WA_NUMBER = "52 7551323184";
 
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
