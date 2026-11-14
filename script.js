@@ -25,7 +25,7 @@ soundBtn.addEventListener("click", () => {
   soundBtn.textContent = "SONIDO: " + (soundOn ? "SÍ" : "NO");
   beep(520, 0.15, "sawtooth", 0.05);
 });
-document.addEventListener("mouseover", e => { if (e.target.closest(".btn,.menu a,.card,.eco,.step,.sound")) beep(680, 0.06, "sine", 0.025); });
+document.addEventListener("mouseover", e => { if (e.target.closest(".btn,.menu a,.card,.eco,.step,.sound,.pain,.chip")) beep(680, 0.06, "sine", 0.025); });
 document.addEventListener("click", e => { if (e.target.closest(".btn,.menu a,.wa")) beep(300, 0.14, "square", 0.05); });
 
 /* ---------- Menú, progreso, cursor ---------- */
@@ -39,7 +39,7 @@ const cur = $("#cursor");
 addEventListener("mousemove", e => { cur.style.transform = `translate(${e.clientX}px,${e.clientY}px)`; });
 
 /* ---------- Aparición al hacer scroll ---------- */
-$$(".card,.eco,.tl,.step,.section-head,.split>*,.flow,.lead-form").forEach(el => el.classList.add("reveal"));
+$$(".card,.eco,.tl,.step,.section-head,.split>*,.flow,.lead-form,.pain,.pain-cta,.social-feature,.shot,.faq details").forEach(el => el.classList.add("reveal"));
 const io = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); beep(240, 0.05, "sine", 0.015); }
 }), { threshold: 0.15 });
@@ -134,3 +134,14 @@ $("#form").addEventListener("submit", e => {
   const msg = `Hola, soy ${f.get("nombre")}${f.get("empresa") ? " de " + f.get("empresa") : ""}.\nMe interesa: ${f.get("interes")}.\n${f.get("mensaje")}`;
   window.open(waLink(msg), "_blank", "noopener");
 });
+
+/* ---------- Complemento de ventas: galería, ampliar imagen, preselección del formulario ---------- */
+$$(".chip").forEach(b => b.addEventListener("click", () => {
+  $$(".chip").forEach(x => x.classList.toggle("on", x === b));
+  $$("#gallery .shot").forEach(s => s.hidden = b.dataset.f !== "all" && s.dataset.g !== b.dataset.f);
+}));
+const lb = document.createElement("div"); lb.className = "lightbox"; lb.innerHTML = "<img alt=''>"; document.body.appendChild(lb);
+$$("#gallery button").forEach(b => b.addEventListener("click", () => { $("img", lb).src = b.dataset.full; $("img", lb).alt = $("img", b).alt; lb.classList.add("open"); }));
+lb.addEventListener("click", () => lb.classList.remove("open"));
+addEventListener("keydown", e => { if (e.key === "Escape") lb.classList.remove("open"); });
+$$("[data-interes]").forEach(a => a.addEventListener("click", () => { const s = $("select[name=interes]"); if (s) s.value = a.dataset.interes; }));
